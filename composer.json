@@ -8,5 +8,10 @@
         }
     ],
     "minimum-stability": "stable",
-    "require": {}
+    "require": {},
+    "autoload": {
+        "prs-4": {
+            "Chudaster\\Service\\": "src"
+        }
+    }
 }

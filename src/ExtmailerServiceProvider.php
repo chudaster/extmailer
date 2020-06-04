@@ -1,6 +1,6 @@
 <?php
 
-namespace Chudaster\Extmailer;
+namespace Chudaster\Service;
 
 use Illuminate\Support\ServiceProvider;
 use App;

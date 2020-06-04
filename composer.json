@@ -1,0 +1,12 @@
+{
+    "name": "chudaster/laravel-extmailer",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Chudaev Viacheslav",
+            "email": "chudaster@yandex.ru"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}

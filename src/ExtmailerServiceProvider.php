@@ -4,7 +4,6 @@ namespace Chudaster\Service;
 
 use Illuminate\Support\ServiceProvider;
 use App;
-use Blade;
 
 
 class ExtmailerServiceProvider extends ServiceProvider

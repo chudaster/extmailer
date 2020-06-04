@@ -10,7 +10,7 @@
     "minimum-stability": "stable",
     "require": {},
     "autoload": {
-        "prs-4": {
+        "psr-4": {
             "Chudaster\\Service\\": "src"
         }
     }

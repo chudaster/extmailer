@@ -2,6 +2,6 @@
 
 return [
 
- 'to' => 'chudaster@yandex.ru',
+ 'ext_to' => 'chudaster@yandex.ru',
 
 ];

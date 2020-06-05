@@ -3,6 +3,7 @@
 namespace Chudaster\Service;
 
 use Illuminate\Support\ServiceProvider;
+use Chudaster\Service\Extmailer;
 use App;
 
 
@@ -26,6 +27,9 @@ class ExtmailerServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             __DIR__.'/../config/extmailer.php', 'extmailer'
         );
+        $this->app->singleton(Mail::class, function ($app){
+            return new Extmailer();
+        });
 
      }
 }

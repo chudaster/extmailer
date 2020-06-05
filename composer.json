@@ -13,5 +13,13 @@
         "psr-4": {
             "Chudaster\\Service\\": "src"
         }
-    }
+    },
+        "extra": {
+        "laravel": {
+            "providers": [
+                "Chudaster\\Service\\ExtmailerServiceProvider"
+            ]
+        }
+    },
+
 }

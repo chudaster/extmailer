@@ -35,4 +35,8 @@ class ExtmailerServiceProvider extends ServiceProvider
             __DIR__.'/../config/extmailer.php', 'extmailer'
         );
      }
+    public function provides()
+    {
+        return array('mailer');
+    }
 }

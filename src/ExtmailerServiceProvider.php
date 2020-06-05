@@ -3,7 +3,6 @@
 namespace Chudaster\Service;
 
 use Illuminate\Support\ServiceProvider;
-use Chudaster\Service\Extmailer;
 use App;
 
 
@@ -15,10 +14,18 @@ class ExtmailerServiceProvider extends ServiceProvider
 
         $this->publishes([__DIR__ . '/../config/' => config_path() . '/']);    
 
-        //$this->publishes([__DIR__ . '/../app/' => app_path() . '/']);
+        $this->app->singleton('mailer', function (Container $app) {
 
+            // ...
 
-        //$this->loadViewsFrom(app_path() .'/Widgets/views', 'Widgets');
+            $mailer = new \Chudaster\Service\Mailer(
+                $app['view'], $app['swift.mailer'], $app['events']
+            );
+
+            // ...
+
+            return $mailer;
+        });
     }
 
  
@@ -27,9 +34,5 @@ class ExtmailerServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             __DIR__.'/../config/extmailer.php', 'extmailer'
         );
-        $this->app->singleton(Mail::class, function ($app){
-            return new Extmailer();
-        });
-
      }
 }

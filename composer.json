@@ -1,6 +1,6 @@
 {
     "name": "chudaster/laravel-extmailer",
-    "type": "library",
+    "type": "project",
    "license": "MIT",
     "authors": [
         {

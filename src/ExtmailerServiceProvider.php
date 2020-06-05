@@ -14,10 +14,10 @@ class ExtmailerServiceProvider extends ServiceProvider
 
         $this->publishes([__DIR__ . '/../config/' => config_path() . '/']);    
 
-        $this->publishes([__DIR__ . '/../app/' => app_path() . '/']);
+        //$this->publishes([__DIR__ . '/../app/' => app_path() . '/']);
 
 
-        $this->loadViewsFrom(app_path() .'/Widgets/views', 'Widgets');
+        //$this->loadViewsFrom(app_path() .'/Widgets/views', 'Widgets');
     }
 
  
@@ -26,10 +26,6 @@ class ExtmailerServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(
             __DIR__.'/../config/extmailer.php', 'extmailer'
         );
-
-        App::singleton('widget', function(){
-            return new \Klisl\Widgets\Widget();
-        });
 
      }
 }

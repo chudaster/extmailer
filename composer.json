@@ -1,6 +1,7 @@
 {
     "name": "chudaster/laravel-extmailer",
     "type": "library",
+   "license": "MIT",
     "authors": [
         {
             "name": "Chudaev Viacheslav",

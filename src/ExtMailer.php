@@ -4,7 +4,8 @@ namespace Chudaster\Service;
 
 use Illuminate\Mail\Events\MessageSending;
 use Illuminate\Support\Facades\App;
-use App
+use App;
+
 class ExtMailer
 {
     public function handle( MessageSending $event )

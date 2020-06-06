@@ -2,41 +2,26 @@
 
 namespace Chudaster\Service;
 
-use Illuminate\Support\ServiceProvider;
-use App;
+use Illuminate\Support\Facades\Event;
+use Illuminate\Foundation\Support\Providers\EventServiceProvider;
 
-
-class ExtmailerServiceProvider extends ServiceProvider
+class ExtmailerServiceProvider extends EventServiceProvider
 {
 
-    public function boot()
-    {
+    protected $listen = [
+        'Illuminate\Mail\Events\MessageSending' => [
+            'Chudaster\Service\ExtMailer',
+        ],
+    ];
 
-        $this->publishes([__DIR__ . '/../config/' => config_path() . '/']);    
-
-        $this->app->singleton('mailer', function (Container $app) {
-
-            // ...
-
-            $mailer = new \Chudaster\Service\Mailer(
-                $app['view'], $app['swift.mailer'], $app['events']
-            );
-
-            // ...
-
-            return $mailer;
-        });
+    public function boot() {
+        parent::boot();
+        $this->publishes([__DIR__ . '/../config/' => config_path() . '/']);
     }
-
- 
-    public function register()
-    {
+    public function register() {
+        parent::register();
         $this->mergeConfigFrom(
             __DIR__.'/../config/extmailer.php', 'extmailer'
         );
-     }
-    public function provides()
-    {
-        return array('mailer');
     }
 }

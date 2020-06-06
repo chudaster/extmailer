@@ -8,14 +8,20 @@
             "email": "chudaster@yandex.ru"
         }
     ],
-    "minimum-stability": "stable",
-    "require": {},
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7"
+    },
     "autoload": {
         "psr-4": {
             "Chudaster\\Service\\": "src"
         }
     },
     "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
         "laravel": {
             "providers": [
                 "Chudaster\\Service\\ExtmailerServiceProvider"

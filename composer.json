@@ -1,7 +1,7 @@
 {
     "name": "chudaster/laravel-extmailer",
     "type": "project",
-   "license": "MIT",
+    "license": "MIT",
     "authors": [
         {
             "name": "Chudaev Viacheslav",
@@ -15,7 +15,7 @@
             "Chudaster\\Service\\": "src"
         }
     },
-        "extra": {
+    "extra": {
         "laravel": {
             "providers": [
                 "Chudaster\\Service\\ExtmailerServiceProvider"
